@@ -1,0 +1,15 @@
+QUILT_PATCHES=debian/patches
+QUILT_NO_DIFF_INDEX=1
+QUILT_NO_DIFF_TIMESTAMPS=1
+QUILT_PUSH_ARGS="--color=auto"
+QUILT_DIFF_OPTS='-p'
+QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
+QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
+
+for where in ./ ../ ../../ ../../../ ../../../../ ../../../../../; do
+    if [ -e ${where}debian/rules -a -d ${where}debian/patches ]; then
+        export QUILT_PATCHES=debian/patches
+        break
+    fi
+done
+

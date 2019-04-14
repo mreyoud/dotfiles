@@ -42,17 +42,19 @@ export ACLOCAL_FLAGS="-I $XDG_DATA_HOME/aclocal/"
 
 unset LOCAL_PREFIX
 
-# enforce the xdg thing
-export GTK2_RC_FILES=${XDG_CONFIG_HOME}/gtk-2.0/gtkrc
-export MPLAYER_HOME=${XDG_CONFIG_HOME}/mplayer
-export LESSHISTFILE=${XDG_CONFIG_HOME}/less/history
-export LESSKEY=${XDG_CONFIG_HOME}/less/keys
-export HISTFILE=${XDG_CACHE_HOME}/bash/history
-export INPUTRC=${XDG_CONFIG_HOME}/readline
-export SCREENRC=${XDG_CONFIG_HOME}/screen
-export MPLAYER_HOME=${XDG_CONFIG_HOME}/mplayer
-export ICEAUTHORITY=${XDG_CACHE_HOME}/ICEauthority
-export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+# more enforcement of the xdg thing
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0"
+export GTK3_RC_FILES="${XDG_CONFIG_HOME}/gtk-3.0"
+export MPLAYER_HOME="${XDG_CONFIG_HOME}/mplayer"
+export LESSKEY="${XDG_CONFIG_HOME}/less/keys"
+export SCREENRC="${XDG_CONFIG_HOME}/screen/screenrc"
+export INPUTRC="${XDG_CONFIG_HOME}/readline/inputrc"
+export VIMINIT=":source ${XDG_CONFIG_HOME}"/vim/vimrc
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+
+export ICEAUTHORITY="${XDG_CACHE_HOME}/ICEauthority"
+export HISTFILE="${XDG_CACHE_HOME}/bash/history"
+export LESSHISTFILE="${XDG_CACHE_HOME}/less/history"
 
 # highlighting inside manpages and elsewhere
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking

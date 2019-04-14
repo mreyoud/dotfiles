@@ -23,7 +23,7 @@ alias	ls='ls -h --color=auto' \
 	diff='colordiff -u' \
 	gdb='gdb -q' \
 	nano='nano -c' \
-	wget='wget -c' \
+	wget='wget -c --hsts-file="$XDG_CACHE_HOME/wget-hsts"' \
 	more='less' \
 	tree='tree -F --dirsfirst' \
 	df='df -h' \
@@ -32,7 +32,8 @@ alias	ls='ls -h --color=auto' \
 	calc='calc -d' \
 	mkdirp='mkdir -p' \
 	dsz='du -hs --apparent-size' \
-	ffmpeg='ffmpeg -hide_banner'
+	ffmpeg='ffmpeg -hide_banner' \
+	xbindkeys = 'xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config'
 
 function spell() { echo $@ | hunspell -d en_US | grep '^&'; }
 function arspell() { echo $@ | hunspell -d ar_SY | grep '^&'; }

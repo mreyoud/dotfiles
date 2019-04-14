@@ -1,0 +1,10 @@
+vo=xv
+ao=alsa
+
+alang=eng,ar,ja,jp,jpn
+slang=ar,eng,ja,jp,jpn
+
+subcp=cp1256
+subfont=DejaVuSans
+sub-font-size=36
+
